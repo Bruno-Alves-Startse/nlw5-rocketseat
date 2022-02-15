@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+    scroll-behavior: smooth;
+    color: #000;
+}
+
+body {
+    max-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    font-size: 62.5%;
+    background-color: #e5e5e5;
+}
+
+body h1 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+body p {
+    font-size: 1.1rem;
+}
