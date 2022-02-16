@@ -1,0 +1,23 @@
+import "../styles/Global.css";
+import Header from "../components/header";
+import "../styles/app.module.css";
+import Player from "../components/player";
+
+export default function MyApp({ Component, pageProps }) {
+  return(
+    <div 
+      style={{
+        display: 'flex'
+      }}
+    >
+      <main
+        flex: ''
+      >
+        <Header />  
+        <Component {...pageProps} />
+      </main>
+
+      <Player />
+    </div> 
+  ) 
+}; 
