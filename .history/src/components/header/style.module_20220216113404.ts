@@ -18,7 +18,12 @@ export const Text = styled('p')({
     borderLeft: '.2px solid #000',
     opacity: .2,
     textAlign: 'center',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    maxWidth: '50%',
 
+    '@media (max-width: 650px
 });
 
 export const DateString = styled('p')({

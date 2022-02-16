@@ -14,11 +14,14 @@ export const Logo = styled('img')({
 });
 
 export const Text = styled('p')({
-    padding: '5px 30px',
+    padding: '5px 0px',
     borderLeft: '.2px solid #000',
     opacity: .2,
     textAlign: 'center',
-
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    maxWidth: '50%',
 });
 
 export const DateString = styled('p')({

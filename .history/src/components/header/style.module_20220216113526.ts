@@ -11,6 +11,12 @@ export const Header = styled('header')({
 
 export const Logo = styled('img')({
     padding: '0 30px 0 0',
+
+    '@media (max-width: 650px)': {
+        padding: '0 5px 0 0',
+        width: '30px',
+        height
+    },
 });
 
 export const Text = styled('p')({
@@ -18,7 +24,14 @@ export const Text = styled('p')({
     borderLeft: '.2px solid #000',
     opacity: .2,
     textAlign: 'center',
+    overflow: 'hidden',
+    textOverflow: 'ellipsis',
+    whiteSpace: 'nowrap',
+    maxWidth: '50%',
 
+    '@media (max-width: 650px)': {
+        padding: '5px'
+    },
 });
 
 export const DateString = styled('p')({

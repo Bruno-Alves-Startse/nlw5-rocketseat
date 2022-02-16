@@ -17,8 +17,6 @@ export const Text = styled('p')({
     padding: '5px 30px',
     borderLeft: '.2px solid #000',
     opacity: .2,
-    textAlign: 'center',
-
 });
 
 export const DateString = styled('p')({
