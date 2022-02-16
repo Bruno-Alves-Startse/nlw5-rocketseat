@@ -56,9 +56,9 @@ export default function index({ lastEpisodes, allEpisodes }: AllEpisodes) {
         <RenderAllEpisodes>
           {allEpisodes.map(episode => {
             return(
-              <CardEpisode key={episode.id}>
+              <Card key={episode.id}>
 
-              </CardEpisode>
+              </Card>
             )
           })}
         </RenderAllEpisodes>
