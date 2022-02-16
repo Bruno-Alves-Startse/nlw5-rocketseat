@@ -21,13 +21,13 @@ export const Player = styled('div')(() => ({
     }
 }));
 
-export const Header = styled('header')(() => ({
+export const Top = styled('div')(() => ({
     display: 'flex',
     alignItems: 'center',
     gap: '15px',
 }));
 
-export const Footer = styled('footer')(() => ({
+export const Footer = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
 }));

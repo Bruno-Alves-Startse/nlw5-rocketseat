@@ -5,7 +5,7 @@ import React, {
 } from 'react'
 import {
   Player, 
-  Header,
+  Top,
   Podcast,
   Footer,
   Progress,
@@ -26,10 +26,10 @@ export default function player() {
         justifyContent: 'space-between',
       }}
     > 
-      <Header>
+      <Top>
         <img src="/playing.svg" alt="tocando agora" />
         <h2>Tocando agora</h2>
-      </Header>
+      </Top>
 
       <Podcast> 
         <h2 

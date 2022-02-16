@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { GetStaticProps } from "next";
-import Image from "next/image";
 
 import { api } from '../services/api';
 import { DurationToTimeString } from "../utils/DurationToTimeString";
@@ -16,9 +15,10 @@ import {
   ContentAllEpisodes,
   Title,
   CardNewEpisode,
-  Card,
-  RenderNewLaunch,
-  RenderAllEpisodes
+  CardEpisode,
+  RenderNewLaunchs,
+  RenderAllEpisodes,
+  TitleCard
 } from "../styles/style.module";
 
 type Episode = {
@@ -42,25 +42,63 @@ export default function index({ lastEpisodes, allEpisodes }: AllEpisodes) {
     <Container>
       <ContentNewLaunch>
         <Title>Novos lançamentos</Title>
-        <RenderNewLaunch>
+        <RenderNewLaunchs>
           {lastEpisodes.map(episode => {
             return(
-              <CardNewEpisode key={episode.id}>{episode.title}</CardNewEpisode>
+              <CardNewEpisode key={episode.id}>
+                <img 
+                  style={{
+                    width: '150px',
+                    objectFit: 'cover',
+                    borderRadius: '20px',
+                  }}
+                  src={episode.thumbnail} 
+                  alt={episode.title} 
+                />  
+                <span>
+                  <TitleCard>{episode.title}</TitleCard>
+                  <p>{episode.members}</p>
+                  <p>{episode.durationToString} | {episode.publishedAt}</p>
+                </span>
+              </CardNewEpisode>
             )
           })}
-        </RenderNewLaunch>
+        </RenderNewLaunchs>
       </ContentNewLaunch>
 
       <ContentAllEpisodes>
         <Title>Veja todos os nossos episódios</Title>
         <RenderAllEpisodes>
-          {allEpisodes.map(episode => {
-            return(
-              <Card key={episode.id}>
-
-              </Card>
-            )
-          })}
+              {allEpisodes.map(episode => {
+                return(
+                  <CardEpisode key={episode.id}>
+                    <img 
+                      style={{
+                        width: '40px',
+                        height: '40px',
+                        objectFit: 'cover',
+                      }}
+                      src={episode.thumbnail} 
+                      alt={episode.title} 
+                    />
+                    <TitleCard 
+                      style={{
+                        maxWidth: '70%',
+                        whiteSpace: 'nowrap',
+                        overflow: 'hidden',
+                        textOverflow: 'ellipsis',
+                      }}
+                    >
+                      {episode.title}
+                    </TitleCard>
+                    <p>{episode.durationToString}</p>
+                    <p>{episode.publishedAt}</p>
+                    <button type="button">
+                      <img src='/play-green.svg' alt="button play" />
+                    </button>
+                  </CardEpisode>
+                )
+              })}
         </RenderAllEpisodes>
       </ContentAllEpisodes>
     </Container>
@@ -70,10 +108,9 @@ export default function index({ lastEpisodes, allEpisodes }: AllEpisodes) {
 export const getStaticProps: GetStaticProps = async () => {
   const { data } = await api.get('episodes', {
     params: {
-      _limit: 5,
       _sort: 'published_at',
       _order: 'desc'
-    }
+    } 
   });
 
   const episodes = data.map(episode => {
