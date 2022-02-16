@@ -20,7 +20,7 @@ import {
   Img,
   CardInformations,
   ButtonPlay
-} from './home/style/style.module';
+} from "./home/style/style.module';
 import { DurationToTimeString } from "../utils/DurationToTimeString";
 
 type Episode = {
