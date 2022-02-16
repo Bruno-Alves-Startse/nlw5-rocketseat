@@ -1,6 +1,7 @@
 .wrapper {
     display: flex;
 }
+
 .wrapper main {
     flex: 1;
 }

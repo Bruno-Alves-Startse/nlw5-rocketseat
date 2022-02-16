@@ -13,11 +13,13 @@ export default function player() {
         <h2>Tocando agora</h2>
       </S.Header>
 
-      <S.Main>
-        <S.Podcast>
-          <h2 style={"" ? {display: "flex", textAlign: "center"} : {display: "flex", textAlign: "center"}}>Selecione um <br /> podcast para ouvir</h2>
-        </S.Podcast>
-      </S.Main>
+      <S.Podcast>
+        <h2 
+          style={"" ? {display: "flex", textAlign: "center"} : {display: "flex", textAlign: "center"}}
+        >
+          Selecione um <br /> podcast para ouvir
+        </h2>
+      </S.Podcast>
 
       <S.Footer>
         <S.Progress>

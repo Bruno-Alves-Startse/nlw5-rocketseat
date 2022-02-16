@@ -1,6 +1,6 @@
 import "../styles/Global.css";
 import Header from "../components/header";
-import "../styles/app.css";
+import "../styles/app.module.css";
 import Player from "../components/player";
 
 export default function MyApp({ Component, pageProps }) {

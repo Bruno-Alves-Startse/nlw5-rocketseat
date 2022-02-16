@@ -2,12 +2,15 @@ import styled from "styled-components";
 
 export const Player = styled.span`
     background-color: #8257E5;
-    width: 32rem;
-    height: 100vh;
+    width: 30%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    right: 0;
+    top: 0;
     h2 {
         color: #fff;
     }
