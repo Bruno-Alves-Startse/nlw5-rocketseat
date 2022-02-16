@@ -1,0 +1,8 @@
+.wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.wrapper main {
+    flex: 1;
+}
