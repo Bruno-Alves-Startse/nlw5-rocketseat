@@ -12,9 +12,9 @@ export default function header() {
     return (
         <Header
             style={{
-                zIndex: '999',   
+                
             }}
-        >
+            >
             <Logo src="/logo.svg" alt="logoPodcast" />
 
             <Text>O melhor para você ouvir, sempre</Text>

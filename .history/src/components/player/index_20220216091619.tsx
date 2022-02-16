@@ -10,7 +10,7 @@ export default function player() {
     <S.Player
       style={{
         display: 'flex',
-        flexDirection: 'column',
+        flexDirection: ''
       }}
     > 
       <S.Header>

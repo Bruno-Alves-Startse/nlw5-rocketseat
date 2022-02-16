@@ -7,12 +7,7 @@ export default function player() {
   const [play, setPlay] = useState(false);
 
   return (
-    <S.Player
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    > 
+    <S.Player> 
       <S.Header>
         <img src="/playing.svg" alt="tocando agora" />
         <h2>Tocando agora</h2>

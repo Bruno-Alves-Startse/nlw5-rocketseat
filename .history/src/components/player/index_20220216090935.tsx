@@ -1,18 +1,13 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react'
-import * as S from "./style.module";
+import * as S from "./style";
 
 export default function player() {
   const [play, setPlay] = useState(false);
 
   return (
-    <S.Player
-      style={{
-        display: 'flex',
-        flexDirection: 'column',
-      }}
-    > 
+    <S.Player>
       <S.Header>
         <img src="/playing.svg" alt="tocando agora" />
         <h2>Tocando agora</h2>

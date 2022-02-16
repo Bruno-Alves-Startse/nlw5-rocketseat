@@ -51,14 +51,14 @@ export default function index(props: AllEpisodes) {
             return(
               <NewCard 
                 style={{
-                  backgroundColor: '#fff',
-                  borderRadius: "20px",
-                  padding: 40,
-                  display: 'flex',
-                  position: 'relative',
-                  gap: '10px',  
-                  overflow: 'hidden',
-                  zIndex: '1',
+                    backgroundColor: '#fff',
+                    borderRadius: "20px",
+                    padding: 40,
+                    display: 'flex',
+                    position: 'relative',
+                    gap: '10px',
+                    overflow: 'hidden',
+                    zIndex: '1',
                 }}
                 key={key}
               >

@@ -9,8 +9,7 @@ export default function player() {
   return (
     <S.Player
       style={{
-        display: 'flex',
-        flexDirection: 'column',
+        
       }}
     > 
       <S.Header>

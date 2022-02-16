@@ -11,9 +11,9 @@ export default function header() {
 
     return (
         <Header
-            style={{
-                zIndex: '999',   
-            }}
+        style={{
+            
+        }}
         >
             <Logo src="/logo.svg" alt="logoPodcast" />
 

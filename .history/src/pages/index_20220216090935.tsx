@@ -20,7 +20,7 @@ import {
   Img,
   CardInformations,
   ButtonPlay
-} from "./home/style/style.module";
+} from "./home/style/style";
 import { DurationToTimeString } from "../utils/DurationToTimeString";
 
 type Episode = {
@@ -56,9 +56,8 @@ export default function index(props: AllEpisodes) {
                   padding: 40,
                   display: 'flex',
                   position: 'relative',
-                  gap: '10px',  
+                  gap: '10px',
                   overflow: 'hidden',
-                  zIndex: '1',
                 }}
                 key={key}
               >
