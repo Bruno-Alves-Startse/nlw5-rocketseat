@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 80px;
+    background: #fff;
+    position: relative;
+}
+
+.logo {
+    padding: 0 30px 0 0;
+    opacity: .4;
+}
+
+.text {
+    padding: 5px 30px;
+    border-left: .2px solid #000;
+    opacity: .2;
+    max-width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dateString {
+    margin-left: auto;
+    text-transform: capitalize;    
+    opacity: .2;
+}
+
+@media (max-width: 650px) {
+    .logo {
+        padding: 0 5px 0 0;
+        width: 120px;
+    }
+
+    .text {
+        display: none;
+    }
+
+    .dateString {
+        font-size: .9rem;
+    }
+}

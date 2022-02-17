@@ -1,7 +1,7 @@
-import "../styles/Global.css";
+import "../styles/Global.module.scss";
 import { Wrapper } from "../styles/app.module";
 
-import Header from "../components/header";
+import Header from "../components/header/header";
 import Player from "../components/player";
 
 export default function MyApp({ Component, pageProps }) {
