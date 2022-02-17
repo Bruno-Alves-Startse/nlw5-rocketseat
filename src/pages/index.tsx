@@ -48,15 +48,15 @@ export default function index({ lastEpisodes, allEpisodes }: AllEpisodes) {
               <CardNewEpisode key={episode.id}>
                 <img 
                   style={{
-                    width: '150px',
+                    width: '90%',
                     objectFit: 'cover',
                     borderRadius: '20px',
                   }}
                   src={episode.thumbnail} 
                   alt={episode.title} 
-                />  
+                />
+                <TitleCard>{episode.title}</TitleCard>
                 <span>
-                  <TitleCard>{episode.title}</TitleCard>
                   <p>{episode.members}</p>
                   <p>{episode.durationToString} | {episode.publishedAt}</p>
                 </span>
