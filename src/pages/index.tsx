@@ -20,6 +20,7 @@ import {
   RenderAllEpisodes,
   TitleCard
 } from "../styles/style.module";
+import Link from "next/link";
 
 type Episode = {
   title: string;
@@ -53,9 +54,22 @@ export default function index({ lastEpisodes, allEpisodes }: AllEpisodes) {
                     borderRadius: '20px',
                   }}
                   src={episode.thumbnail} 
-                  alt={episode.title} 
+                  alt={episode.title}  
                 />
-                <TitleCard>{episode.title}</TitleCard>
+                <Link href={`/episodes/${episode.id}`}>
+                  <a 
+                    style={{
+                      fontSize: '1.1rem',
+                      maxWidth: '60%',
+                      whiteSpace: 'nowrap',
+                      overflow: 'hidden',
+                      textOverflow: 'ellipsis',
+                      textDecoration: 'none',
+                    }}
+                  >
+                    {episode.title}
+                  </a>
+                </Link>
                 <span>
                   <p>{episode.members}</p>
                   <p>{episode.durationToString} | {episode.publishedAt}</p>
@@ -74,25 +88,33 @@ export default function index({ lastEpisodes, allEpisodes }: AllEpisodes) {
                   <CardEpisode key={episode.id}>
                     <img 
                       style={{
-                        width: '40px',
-                        height: '40px',
+                        width: '150px',
+                        height: '100%',
                         objectFit: 'cover',
+                        borderRadius: '20px',
                       }}
                       src={episode.thumbnail} 
                       alt={episode.title} 
                     />
-                    <TitleCard 
-                      style={{
-                        maxWidth: '70%',
-                        whiteSpace: 'nowrap',
-                        overflow: 'hidden',
-                        textOverflow: 'ellipsis',
-                      }}
-                    >
-                      {episode.title}
-                    </TitleCard>
-                    <p>{episode.durationToString}</p>
-                    <p>{episode.publishedAt}</p>
+                    
+                    <Link href={`/episodes/${episode.id}`}>
+                      <a 
+                        style={{
+                          fontSize: '1.1rem',
+                          maxWidth: '60%',
+                          whiteSpace: 'nowrap',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          textDecoration: 'none',
+                        }}
+                      >
+                        {episode.title}
+                      </a>
+                    </Link>
+                    <span>
+                      <p>{episode.durationToString}</p>
+                      <p>{episode.publishedAt}</p>
+                    </span>
                     <button type="button">
                       <img src='/play-green.svg' alt="button play" />
                     </button>

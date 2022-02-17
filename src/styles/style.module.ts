@@ -46,6 +46,12 @@ export const CardNewEpisode = styled('div')(() => ({
     gap: '30px',
     overflow: 'hidden',
 
+    '& a': {
+        '&:hover': {
+            textDecoration: 'underline',
+        }
+    },
+
     '& span': {
         display: 'flex',
         flexDirection: 'column',
@@ -69,8 +75,9 @@ export const CardEpisode = styled('div')(() => ({
     width: '100%',
     height: '150px',
     background: '#fff',
-    padding: '10px',
+    padding: '20px',
     margin: '20px 0',
+    gap: '10px',
     borderRadius: '20px',
     display: 'flex',
     justifyContent: 'space-between',
@@ -78,13 +85,38 @@ export const CardEpisode = styled('div')(() => ({
 
     '& p': {
         opacity: '.5',
+    },
+
+    '& span': {
+        display: 'flex',
+        flexDirection: 'column',
+    },
+
+    '& button': {
+        border: 'none',
+        padding: '5px',
+        background: '#aaaaaa50',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: '10px',
+        cursor: 'pointer',
+
+        '& img': {
+            width: '30px'
+        }
+    },
+
+    '@media (max-width: 850px)': {
+        flexDirection: 'column',
+        height: 'auto'
     }
 }));
 
 export const RenderNewLaunchs = styled('div')(() => ({
     display: 'flex',
     gap: '25px',
-    width: '100%',
+    width: '100%', 
 
     '@media (max-width: 850px)': {
         flexDirection: 'column',   
